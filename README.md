@@ -1,137 +1,217 @@
-# 🧠 Water Jug Puzzle Game (AI Solver)
+Water Jug Puzzle Game with AI Solver
 
-An Android puzzle game based on the classic **Water Jug Problem**, a well-known Artificial Intelligence search problem.
+Android Application Project Documentation
 
-The objective is to measure a specific quantity of water using a limited number of jugs with fixed capacities.
+Developer: Mahe Barnwal
+Program: B.Tech Computer Science & Engineering
+Platform: Android
+Language: Kotlin
+IDE: Android Studio
 
-This project demonstrates **State Space Search using Breadth-First Search (BFS)** to compute optimal solutions automatically.
+1. Project Overview
 
----
+The Water Jug Puzzle Game is an Android mobile application based on the classical Water Jug Problem, a well-known problem in Artificial Intelligence and algorithm design. The objective of the puzzle is to measure a specific quantity of water using jugs with fixed capacities.
 
-# 📱 Features
+Players interact with the puzzle by performing operations such as filling, emptying, and pouring water between jugs to achieve the target quantity. The application also incorporates an AI-based solver that uses Breadth-First Search (BFS) to compute optimal solutions.
 
-• 20 Puzzle Levels with increasing difficulty
-• Difficulty progression: Easy → Medium → Hard → Advanced
-• Interactive water jug visualization
-• Move counter and timer system
-• AI Hint system for solving puzzles step-by-step
-• Auto-Solve using BFS (Artificial Intelligence search algorithm)
-• Best score tracking for each level
-• Local user profile with persistent progress
-• Clean Material Design UI using Jetpack Compose
+The project demonstrates how state-space search algorithms from Artificial Intelligence can be applied to solve real-world logical puzzles in an interactive mobile environment.
 
----
+2. Objectives of the Project
 
-# 🧩 Gameplay
+The main objectives of this project are:
 
-Players must manipulate the jugs using the following operations:
+To implement the classical Water Jug Problem as an interactive mobile game.
 
-• Fill a jug completely
-• Empty a jug
-• Pour water from one jug into another
+To demonstrate the application of Artificial Intelligence search algorithms.
 
-The goal is to reach an **exact target amount of water** in any jug.
+To provide users with hints and automatic solutions generated using AI.
 
-Example puzzle:
+To create an engaging puzzle-based learning experience for users.
 
-```
-Jug Capacities: 8L, 5L, 3L
-Goal: Measure exactly 4L
-```
+To design a clean and modern Android user interface using Jetpack Compose.
 
----
+3. Key Features
 
-# 🤖 Artificial Intelligence Implementation
+The application provides the following features:
 
-The game uses **State Space Search** to compute solutions.
+Puzzle Gameplay
 
-Each configuration of water amounts is treated as a **state**.
+Interactive water jug puzzle mechanics
 
-The solver explores possible states using:
+Fill, empty, and pour operations
 
-### Breadth-First Search (BFS)
+Real-time visual representation of jug water levels
 
-BFS guarantees:
+Multiple Difficulty Levels
 
-✔ Optimal solution (minimum number of moves)
-✔ No repeated states using visited state tracking
-✔ Complete search of the state space
+The game contains 20 puzzle levels divided into difficulty categories:
 
----
+Easy
 
-# ⚙️ Technologies Used
+Medium
 
-• **Kotlin**
-• **Jetpack Compose**
-• **Android Studio**
-• **Material Design 3**
-• **Breadth First Search Algorithm**
-• **SharedPreferences** for local storage
+Hard
 
----
+Advanced
 
-# 📂 Project Structure
+Levels gradually increase in complexity by introducing larger capacities and multiple jugs.
 
-```
-WaterJug-game
-│
-├── app
-│   ├── data
-│   │   ├── LevelRepository.kt
-│   │   ├── UserManager.kt
-│   │   └── MultiJugHintSolver.kt
-│   │
-│   ├── ui
-│   │   ├── GameScreen.kt
-│   │   ├── LevelSelectScreen.kt
-│   │   └── components
-│   │
-│   ├── WaterJugSolver.kt
-│   └── MultiJugSolver.kt
-│
-├── gradle
-├── build.gradle.kts
-└── settings.gradle.kts
-```
+AI Hint System
 
----
+The hint system analyzes the current game state and suggests the optimal next move using a search algorithm.
 
-# 🚀 Running the Project
+Auto-Solve Feature
 
-1. Clone the repository
+The application can automatically demonstrate the optimal sequence of moves required to solve the puzzle.
 
-```
-git clone https://github.com/mahe510/WaterJug-game.git
-```
+Score System
 
-2. Open the project in **Android Studio**
+Players receive scores based on:
 
-3. Let Gradle sync complete
+Number of moves
 
-4. Run the project on an emulator or Android device.
+Time taken
 
----
+Hint usage
 
+Progress Tracking
 
-# 🎯 Educational Purpose
+The application stores:
 
-This project demonstrates how classic **AI search algorithms** can be applied to real-world puzzles.
+Best score for each level
 
-It is useful for learning:
+Total levels completed
 
-• State Space Search
-• Breadth-First Search (BFS)
-• Problem Modelling in AI
-• Android UI development using Jetpack Compose
+Player progress
 
----
+This data is stored locally using SharedPreferences.
 
-# 👨‍💻 Author
+4. Technology Stack
 
-**Mahe Barnwal**
+The following technologies were used to develop the application.
 
-B.Tech Computer Science & Engineering
+Programming Language
 
-GitHub:
-https://github.com/mahe510
+Kotlin
 
+Development Environment
+
+Android Studio
+
+UI Framework
+
+Jetpack Compose
+
+Data Storage
+
+SharedPreferences
+
+Version Control
+
+Git & GitHub
+
+Algorithm
+
+Breadth-First Search (BFS)
+
+5. Artificial Intelligence Implementation
+
+The Water Jug problem is modeled as a state-space search problem.
+
+Each configuration of water levels inside the jugs represents a state. The AI algorithm explores all possible states by applying valid operations such as:
+
+Filling a jug
+
+Emptying a jug
+
+Pouring water from one jug to another
+
+The Breadth-First Search (BFS) algorithm is used to explore the state space.
+
+BFS systematically examines all possible states level-by-level and guarantees that the first solution found is the optimal solution with the minimum number of moves.
+
+A visited state set is maintained to avoid revisiting previously explored states, ensuring efficient exploration of the state space.
+
+This approach allows the application to provide both:
+
+Optimal hints
+
+Automatic puzzle solving
+
+6. Application Workflow
+
+The application follows the workflow below:
+
+User launches the application.
+
+User selects a puzzle level.
+
+The game screen displays jug capacities and the target goal.
+
+The player performs actions such as filling, emptying, or pouring water.
+
+The system tracks the number of moves and time taken.
+
+The AI hint system suggests the next optimal move when requested.
+
+The auto-solve feature demonstrates the optimal solution.
+
+When the goal is achieved, the level is marked as completed.
+
+The player's score and progress are saved.
+
+7. User Interface Design
+
+The application interface is developed using Jetpack Compose, which provides a modern declarative UI approach for Android applications.
+
+The interface includes:
+
+A level selection screen
+
+Animated water jug visualization
+
+Interactive control buttons
+
+Real-time move and timer display
+
+Completion and scoring screen
+
+The design focuses on simplicity, usability, and clear visual feedback for puzzle interactions.
+
+8. Challenges Faced During Development
+
+Several challenges were encountered during the development process:
+
+Designing solvable puzzle levels with appropriate difficulty
+
+Preventing infinite loops in the solver algorithm
+
+Managing state transitions efficiently
+
+Ensuring the AI solver does not freeze the application
+
+Designing a responsive and interactive UI
+
+These challenges were addressed through careful algorithm design and testing.
+
+9. Future Improvements
+
+Possible improvements for the application include:
+
+Online leaderboard system
+
+Multiplayer puzzle challenges
+
+Additional puzzle variations
+
+Advanced AI algorithms such as A* search
+
+Cloud-based progress synchronization
+
+Animated water physics
+
+10. Conclusion
+
+The Water Jug Puzzle Game successfully demonstrates the practical application of Artificial Intelligence search algorithms in mobile application development.
+
+By combining algorithmic problem solving with interactive Android UI design, the project provides both an educational and entertaining puzzle experience. The integration of AI-powered hints and automatic solving makes the application a useful tool for understanding state-space search techniques in Artificial Intelligence.
