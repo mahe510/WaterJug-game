@@ -139,6 +139,17 @@ App/
  │    ├── JugView.kt
 ```
 
+## 📸 App Screenshots
+
+<p align="center">
+  <img src="screenshots/ss1.jpeg" width="230">
+  <img src="screenshots/ss2.jpeg" width="230">
+</p>
+
+<p align="center">
+  <img src="screenshots/ss3.jpeg" width="230">
+</p>
+
 ---
 
 # 🚀 How to Run
