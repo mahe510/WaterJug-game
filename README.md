@@ -66,7 +66,6 @@ BFS guarantees:
 • **Android Studio**
 • **Material Design 3**
 • **Breadth First Search Algorithm**
-• ** A* Algorithm **
 • **SharedPreferences** for local storage
 
 ---
