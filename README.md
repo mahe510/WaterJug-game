@@ -172,5 +172,6 @@ Run the app on:
 You can download and install the APK from the link below:
 
 ```
-https://drive.google.com/your-apk-link
+https://drive.google.com/file/d/1aR54Rdr5KRBEvPLcwAvPHRse7k-OxxfR/view?usp=sharing
 ```
+
